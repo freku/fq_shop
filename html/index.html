@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>god like nav/</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id='main'>
+        <div class="main-box">
+            <div class="close-bar">
+                <div class="shop-name" id='top-shop-title'>Shotpex shop</div>
+                <div class="close-btn">
+                    <span>X</span>
+                </div>
+            </div>
+            <div class="nav-items-box">
+                <div class="nav-box">
+                    <ul class="nav-list">
+                        <li>
+                            <span id='weapon-upgrades-box'>Weapon upgrades (static)</span>
+                            <ul>
+                                <li data-open="pistol-parts"><img src="imgs/pistol50.png" class="nav-img"><span id='u-pistol-box'>Pistol upgrades [12/1337]</span></li>
+                                <li data-open="submachine-parts"><img src="imgs/subm.png" class="nav-img"><span id='u-submachine-box'>Submachine upgrades</span> </li>
+                                <li data-open="shotgun-parts"><img src="imgs/shotg.png" class="nav-img"><span id='u-shotgun-box'>Shotgun upgrades </span></li>
+                                <li data-open="rifle-parts"><img src="imgs/rifle_ak.png" class="nav-img"><span id='u-rifle-box'>Rifle upgrades </span></li>
+                            </ul>
+                        </li>
+                        <li id='hide-w'>
+                            <span id='weaponons-box'>Weapons</span>
+                            <ul>
+                                <li data-open="sniper-guns" id='sniper-box'>Sniper rifles</li>
+                                <li data-open="explosive-guns" id='heavy-box'>Heavy weapons</li>
+                                <li data-open="throwable" id='throwable-box'>Throwables</li>
+                                <li data-open="machine-guns" id='l-machine-box'>Light machine guns</li>
+                            </ul>
+                        </li>
+                        <li id='hide-u'>
+                            <span id='usable-box'>Usables</span>
+                            <ul>
+                                <li data-open='consumable' id='health-box'>Health</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="items-box">
+                    <div class="msg-box">
+                        <!-- Error, bought messages -->
+                    </div>
+                    <div class="items-page few-items" id="machine-guns">
+                        <div class="item" id='item-01'>
+                            <img src="imgs/mg.png" class="item-img">
+                            <div class="item-name">MG</div>
+                            <div class="item-cost">$6200</div>
+                            <button class="item-buy-btn" data-id='1' data-cost='6200'>Buy</button>
+                        </div>
+                        <div class="item" id='item-02'>
+                            <img src="imgs/combatmg.png" class="item-img">
+                            <div class="item-name">Combat MG</div>
+                            <div class="item-cost">$6800</div>
+                            <button class="item-buy-btn" data-id='2' data-cost='6800'>Buy</button>
+                        </div>
+                    </div>
+                    <div class="items-page" id="rifle-parts">
+                        <div class="item" id='item-03'>
+                            <img src="imgs/sight.png" class="item-img">
+                            <div class="item-name">Scope</div>
+                            <div class="item-cost">$156000</div>
+                            <button class="item-buy-btn" data-id='3' data-cost='156000' data-static='rifle sight'>Buy</button>
+                        </div>
+                        <div class="item" id='item-04'>
+                            <img src="imgs/supressor.png" class="item-img">
+                            <div class="item-name">Supressor</div>
+                            <div class="item-cost">$158500</div>
+                            <button class="item-buy-btn" data-id='4' data-cost='158500' data-static='rifle supressor'>Buy</button>
+                        </div>
+                        <div class="item" id='item-05'>
+                            <img src="imgs/magg.png" class="item-img">
+                            <div class="item-name">Clip/Magazine</div>
+                            <div class="item-cost">$162000</div>
+                            <button class="item-buy-btn" data-id='5' data-cost='162000' data-static='rifle clip'>Buy</button>
+                        </div>
+                        <div class="item" id='item-06'>
+                            <img src="imgs/grip.png" class="item-img">
+                            <div class="item-name">Grip</div>
+                            <div class="item-cost">$155000</div>
+                            <button class="item-buy-btn" data-id='6' data-cost='155000' data-static='rifle grip'>Buy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="items-page few-items" id="pistol-parts">
+                        <div class="item" id='item-07'>
+                            <img src="imgs/supressor.png" class="item-img">
+                            <div class="item-name">Supressor</div>
+                            <div class="item-cost">$157500</div>
+                            <button class="item-buy-btn" data-id='7' data-cost='157500' data-static='pistol supressor'>Buy</button>
+                        </div>
+                        <div class="item" id='item-08'>
+                            <img src="imgs/magg.png" class="item-img">
+                            <div class="item-name">Clip/Magazine</div>
+                            <div class="item-cost">$160000</div>
+                            <button class="item-buy-btn" data-id='8' data-cost='160000' data-static='pistol clip'>Buy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="items-page few-items" id="submachine-parts">
+                        <div class="item" id='item-09'>
+                            <img src="imgs/supressor.png" class="item-img">
+                            <div class="item-name">Supressor</div>
+                            <div class="item-cost">$158500</div>
+                            <button class="item-buy-btn" data-id='9' data-cost='158500' data-static='submachine supressor'>Buy</button>
+                        </div>
+                        <div class="item" id='item-10'>
+                            <img src="imgs/sight.png" class="item-img">
+                            <div class="item-name">Sight</div>
+                            <div class="item-cost">$156000</div>
+                            <button class="item-buy-btn" data-id='10' data-cost='156000' data-static='submachine sight'>Buy</button>
+                        </div>
+                        <div class="item" id='item-11'>
+                            <img src="imgs/magg.png" class="item-img">
+                            <div class="item-name">Clip/Magazine</div>
+                            <div class="item-cost">$161000</div>
+                            <button class="item-buy-btn" data-id='11' data-cost='161000' data-static='submachine clip'>Buy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="items-page few-items" id="shotgun-parts">
+                        <div class="item" id='item-12'>
+                            <img src="imgs/supressor.png" class="item-img">
+                            <div class="item-name">Supressor</div>
+                            <div class="item-cost">$159000</div>
+                            <button class="item-buy-btn" data-id='12' data-cost='159000' data-static='shotgun supressor'>Buy</button>
+                        </div>
+                        <div class="item" id='item-13'>
+                            <img src="imgs/grip.png" class="item-img">
+                            <div class="item-name">Grip</div>
+                            <div class="item-cost">$155000</div>
+                            <button class="item-buy-btn" data-id='13' data-cost='155000' data-static='shotgun grip'>Buy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="items-page few-items" id="sniper-guns">
+                        <div class="item" id='item-14'>
+                            <img src="imgs/sniperrifle.png" class="item-img">
+                            <div class="item-name">Sniper Rifle</div>
+                            <div class="item-cost">$6200</div>
+                            <button class="item-buy-btn" data-id='14' data-cost='6200'>Buy</button>
+                        </div>
+                        <div class="item" id='item-15'>
+                            <img src="imgs/heavu.png" class="item-img">
+                            <div class="item-name">Heavy Sniper</div>
+                            <div class="item-cost">$8000</div>
+                            <button class="item-buy-btn" data-id='15' data-cost='8000'>Buy</button>
+                        </div>
+                        <div class="item" id='item-16'>
+                            <img src="imgs/autosnipe.png" class="item-img">
+                            <div class="item-name">Marksman Rifle</div>
+                            <div class="item-cost">$7800</div>
+                            <button class="item-buy-btn" data-id='16' data-cost='7800'>Buy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="items-page" id="explosive-guns">
+                        <div class="item" id='item-17'>
+                            <img src="imgs/rpg.png" class="item-img">
+                            <div class="item-name">RPG</div>
+                            <div class="item-cost">$7800</div>
+                            <button class="item-buy-btn" data-id='17' data-cost='7800'>Buy</button>
+                        </div>
+                        <div class="item" id='item-18'>
+                            <img src="imgs/glauncher.png" class="item-img">
+                            <div class="item-name">Grenade launcher</div>
+                            <div class="item-cost">$7450</div>
+                            <button class="item-buy-btn" data-id='18' data-cost='7450'>Buy</button>
+                        </div>
+                        <div class="item" id='item-19'>
+                            <img src="imgs/minigun.png" class="item-img">
+                            <div class="item-name">Minigun</div>
+                            <div class="item-cost">$9000</div>
+                            <button class="item-buy-btn" data-id='19' data-cost='9000'>Buy</button>
+                        </div>
+                        <div class="item" id='item-20'>
+                            <img src="imgs/hLauncher.png" class="item-img">
+                            <div class="item-name">Homing Launcher</div>
+                            <div class="item-cost">$8450</div>
+                            <button class="item-buy-btn" data-id='20' data-cost='8450'>Buy</button>
+                        </div>
+                        <div class="item" id='item-21'>
+                            <img src="imgs/compactLauncher.png" class="item-img">
+                            <div class="item-name">Compact Grenade Launcher</div>
+                            <div class="item-cost">$6300</div>
+                            <button class="item-buy-btn" data-id='21' data-cost='6300'>Buy</button>
+                        </div>
+                    </div>
+                    <div class="items-page" id="throwable">
+                        <div class="item" id='item-22'>
+                            <img src="imgs/grenade.png" class="item-img">
+                            <div class="item-name">Grenade</div>
+                            <div class="item-cost">$2650</div>
+                            <button class="item-buy-btn" data-id='22' data-cost='2650'>Buy</button>
+                        </div>
+                        <div class="item" id='item-23'>
+                            <img src="imgs/stickybomb.png" class="item-img">
+                            <div class="item-name">Sticky Bomb</div>
+                            <div class="item-cost">$3200</div>
+                            <button class="item-buy-btn" data-id='23' data-cost='3200'>Buy</button>
+                        </div>
+                        <div class="item" id='item-24'>
+                            <img src="imgs/gasNade.png" class="item-img">
+                            <div class="item-name">BZ Gas</div>
+                            <div class="item-cost">$2000</div>
+                            <button class="item-buy-btn" data-id='24' data-cost='2000'>Buy</button>
+                        </div>
+                        <div class="item" id='item-25'>
+                            <img src="imgs/molo.png" class="item-img">
+                            <div class="item-name">Molotov Cocktail</div>
+                            <div class="item-cost">$2300</div>
+                            <button class="item-buy-btn" data-id='25' data-cost='2300'>Buy</button>
+                        </div>
+                        <div class="item" id='item-26'>
+                            <img src="imgs/pipebomb.png" class="item-img">
+                            <div class="item-name">Pipe Bombs</div>
+                            <div class="item-cost">$2500</div>
+                            <button class="item-buy-btn" data-id='26' data-cost='2500'>Buy</button>
+                        </div>
+                    </div>
+
+                    <div class="items-page few-items" id="consumable">
+                        <div class="item" id='item-27'>
+                            <img src="imgs/armor.png" class="item-img">
+                            <div class="item-name">Armour</div>
+                            <div class="item-cost">$1025</div>
+                            <button class="item-buy-btn" data-id='27' data-cost='1025'>Buy</button>
+                        </div>
+                        <div class="item" id='item-28'>
+                            <img src="imgs/health.png" class="item-img">
+                            <div class="item-name">First Aid Kit</div>
+                            <div class="item-cost">$950</div>
+                            <button class="item-buy-btn" data-id='28' data-cost='950'>Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#main').hide();
+    </script>
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: url(gta-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bree Serif', serif;
+    user-select: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+}
+
+.main-box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 80%;
+    min-width: 900px;
+    min-height: 600px;
+}
+
+.shop-name {
+    width: 96%;
+    text-shadow: 0 0 5px rgb(233, 55, 55), 0 0 20px rgb(255, 238, 0);
+    padding-left: 10px;
+}
+
+.close-bar {
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 3px solid rgb(207, 210, 247); 
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+.close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: red;
+    border-radius: 100%;
+    box-shadow: 0 0 10px red;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+.nav-items-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    margin-top: 10px;
+}
+
+.nav-box {
+    width: 26%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    margin-right: 10px;
+    border: 3px solid rgb(207, 210, 247);
+    border-radius: 0 0 0 10px;
+    border-top: none;
+    border-right: none;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+.nav-box ul {
+    list-style-type: none;
+    margin: 10px;
+}
+.nav-box ul ul {
+    margin-left: 20px;
+}
+
+.nav-box ul ul li {
+    background: rgba(255, 255, 255, 1);
+    margin-bottom: 3px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    border-radius: 3px;
+    border-left: 3px solid rgb(111, 181, 247);
+}
+
+.nav-box ul ul li:hover {
+    text-shadow: 0 0 1px black;
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+}
+
+.nav-box ul ul:last-child {
+    margin-bottom: 0;
+}
+
+.nav-item-picked {
+    border-left: 3px solid rgb(255, 0, 0) !important;
+    background: rgb(231, 231, 231) !important;
+}
+
+.nav-img {
+    width: 20px;
+    border-radius: 100%;
+    margin-right: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+.items-box {
+    width: 75%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    border: 3px solid rgb(207, 210, 247);
+    border-radius: 0 0 10px 0;
+    border-top: none;
+    border-left: none;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    position: relative;
+}
+
+.items-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.few-items {
+    /* justify-content: flex-start; */
+}
+
+.item {
+    width: 23%;
+    background: white;
+    color: black;
+    margin: 6px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 5px white, 0 0 3px white;
+}
+
+.item-static-bought {
+    background: rgb(198, 245, 176);
+    box-shadow: 0 0 15px rgb(132, 250, 138) !important;
+}
+
+.btn-static-bought {
+    opacity: 0.5;
+}
+
+.btn-static-bought:hover {
+    cursor: not-allowed !important;
+    background: rgb(46, 46, 46) !important;
+    box-shadow: none !important;
+}
+
+.btn-static-bought:active {
+    color: white !important;
+    text-shadow: none !important;
+}
+
+.item-img {
+    width: 100%;
+}
+
+.item-name {
+}
+
+.item-cost {
+    color: rgb(44, 172, 5);
+    font-size: 19px; 
+}
+
+.item-buy-btn {
+    border: none;
+    background: rgb(46, 46, 46);
+    padding: 5px 10px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 50%;
+    color: white;
+}
+
+.item-buy-btn:hover {
+    box-shadow: 0 0 3px black;
+    background: linear-gradient(135deg, rgba(0,184,175,1) 0%, rgba(174,6,189,1) 100%);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.item-buy-btn:focus {outline: none;}
+
+.item-buy-btn:active {
+    color: orange;
+    text-shadow: 0 0 3px red, 0 0 10px orange, 0 0 15px orange;
+}
+
+.msg-box {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    height: 36px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.msg-box p {
+    color: white;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.msg-bad {
+    background: rgb(233, 55, 55);
+    box-shadow: 0 0 4px rgb(233, 55, 55), 0 0 4px rgb(233, 55, 55);
+}
+
+.msg-good {
+    background: rgb(252, 235, 0);
+    box-shadow: 0 0 4px rgb(252, 235, 0), 0 0 4px rgb(252, 235, 0);
+    color: black !important;
+}
+
+@media only screen and (max-height: 730px), screen and (max-width: 1200px) {
+  
+}
